@@ -1,17 +1,14 @@
----
-siteTitle: Sam Barnett Portfolio
----
 <!doctype html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    {% comment %}<link rel="canonical" href="https://example.com/">{% endcomment %}
+    
 
     <!-- SEARCH ENGINE AVOID   -->
     <meta name="robots" content="noindex">
 
 
-    <title>{{ title }} | {{ siteTitle }}</title>
+    <title>Sam Barnett Portfolio | Sam Barnett Portfolio</title>
     <meta name="description"
           content="Sam Barnett's Portfolio">
 
@@ -26,14 +23,21 @@ siteTitle: Sam Barnett Portfolio
           integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
           crossorigin="anonymous"/>
 
-    <link rel="stylesheet" href="{{ '/style/style.css' | url }}">
+    <link rel="stylesheet" href="/iat339/style/style.css">
 
 </head>
 <body>
 
-{% include 'partials/nav' %}
-{{ content }}
-{% include 'partials/footer' %}
-<script src="{{ '/script/script.js' | url }}"></script>
+<nav class="navigation">
+    <div class="logo"><a>Sam Barnett</a></div>
+    <div class="about"><a>About</a></div>
+</nav>
+<section>
+
+</section>
+<footer>
+    <span>© Sam Barnett 2020</span>
+</footer>
+<script src="/iat339/script/script.js"></script>
 </body>
 </html>

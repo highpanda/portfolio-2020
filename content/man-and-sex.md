@@ -1,5 +1,6 @@
 ---
-title: Man & Sex: Fetching the Bone
+tags: portfolio
+title: Man & Sex—Fetching the Bone
 categories: 
  - Speculative Design
  - Faux-Documentary

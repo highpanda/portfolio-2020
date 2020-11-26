@@ -2,8 +2,9 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("README.md");
   eleventyConfig.addPassthroughCopy("media");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("style/style.css");
-  eleventyConfig.addPassthroughCopy("script/script.js");
+  eleventyConfig.addPassthroughCopy("script/script-min.js");
 
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);

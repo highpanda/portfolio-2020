@@ -1,5 +1,7 @@
-{
-  font-family: forma-djr-display, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+@import "_vendor/modularscale/modularscale";
+@import "_vendor/responsive-modular-scale/responsive-modular-scale";
+
+@import "base", "typography";
+
+// COMPONENTS
+@import "navigation";

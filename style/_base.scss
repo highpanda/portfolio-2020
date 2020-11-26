@@ -1,0 +1,77 @@
+
+
+$base-font-size: 16px;
+
+
+$phone: 430px;
+$tablet: 768px;
+$bp-desktop: 1080px;
+
+$bp-phone: "min-width: 430px";
+$bp-phone-down: "max-width: 430px";
+
+$bp-tablet: "min-width: 768px";
+$bp-tablet-down: "max-width: 768px";
+
+$bp-desktop: "min-width: 1080px";
+
+
+
+@function space($n) {
+  $spacing-increment: 1;
+
+  $space: $n * $spacing-increment;
+  @return $space * 1em;
+}
+
+$modularscale: (
+        base: 1em,
+        ratio: 1.414
+);
+
+@include rms-set-scales(16px, 1.333, $phone 1.414);
+
+
+
+//{
+//  font-family: forma-djr-display, sans-serif;
+//  font-weight: 400;
+//  font-style: normal;
+//
+//  font-family: forma-djr-display,sans-serif;
+//  font-weight: 400;
+//  font-style: italic;
+//
+//  font-family: forma-djr-display, sans-serif;
+//  font-weight: 500;
+//  font-style: normal;
+//
+//  font-family: forma-djr-display,sans-serif;
+//  font-weight: 500;
+//  font-style: italic;
+//}
+//
+//{
+//  font-family: p22-mackinac-pro,serif;
+//  font-weight: 400;
+//  font-style: normal;
+//
+//  font-family: p22-mackinac-pro,serif;
+//  font-weight: 400;
+//  font-style: italic;
+//
+//  font-family: p22-mackinac-pro,serif;
+//  font-weight: 500;
+//  font-style: normal;
+//
+//  font-family: p22-mackinac-pro,serif;
+//  font-weight: 500;
+//  font-style: italic;
+//}
+
+
+.navigation{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

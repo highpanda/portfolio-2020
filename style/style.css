@@ -1,0 +1,75 @@
+/*
+  Take a pixel value and convert it to an em value, using a base font size for reference.
+
+  @param  (number) $px: pixel value to convert.
+  @param  (number) $base: base font size to use in calculation.
+  @return (number) calculated em value
+*/
+/*
+  Strip the units off a number.
+
+  @param  (number) $number: number with unit to convert.
+  @return (number) Input number without units.
+*/
+/*
+  Sets user-defined values for the modular scale, which replace the default values defined above. The function accepts any number of arguments which should take the form:
+
+  $base, $interval1, $interval2, ...
+
+  @param  (number or list) $base: one or more pixel values to use as the base of the modular scale. These don't change between breakpoints.
+  @param  (list) $interval: A list containing a pixel value (representing a min-width breakpoint) followed by an interval (an integer or one of modular-scale's predefined ratios).
+*/
+/*
+  Outputs the values of each scale to the console using modular-scale's modular-scale-list() mixin. The range of values to be returned can be specified; otherwise, 20 values starting from the base value will be returned.
+
+  @param  (number) $start: index on the scale to start at (0 is the base value).
+  @param  (number) $end: index on the scale to end at.
+*/
+/*
+  Use pixel values for breakpoints and font sizes.
+
+  @param  (boolean) $true: if true, the system will use pixels; otherwise, ems.
+*/
+/*
+  Change the base font size from the default of 16px, for use by the to-em() function.
+
+  @param  (number) $number: pixel value to change to.
+*/
+/*
+  Iterates through the list of breakpoints and intervals, outputting multiple font-size declarations for each breakpoint.
+
+  @param  (number) $n: position on the modular scale to use.
+*/
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+html,
+body,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+fieldset,
+label,
+legend,
+textarea,
+caption {
+  vertical-align: baseline;
+  font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: forma-djr-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
