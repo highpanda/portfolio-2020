@@ -8,6 +8,7 @@ title: Sam Barnett | styleguide
         <h1>Style Guide</h1>
         <section>
             <h2 class="styleGuide__sectionTitle">Typography</h2>
+
             <div class="styleGuide__element">
                 <h3>Heading Hierarchy</h3>
                 <div class="styleGuide__example">
@@ -29,6 +30,7 @@ title: Sam Barnett | styleguide
                     </code>
                 </pre>
             </div>
+
             <div class="styleGuide__element">
                 <h3>Body Copy</h3>
                 <div class="styleGuide__example">
@@ -50,8 +52,28 @@ title: Sam Barnett | styleguide
                     </code>
                 </pre>
             </div>
+
             <div class="styleGuide__element">
-            <h3>Headline</h3>
+            <h3>Links</h3>
+                <div class="styleGuide__example">
+                    <span>Therefore, Debord promotes <a href="/">patriarchialist destructuralism</a>.</span>
+                </div>
+                <pre>
+                    <code class="language-html">
+                        <script type="prism-html-markup">
+                            <a href="">...</a>
+                        </script>
+                    </code>
+                </pre>
+            </div>
+
+        </section>
+
+        <section>
+            <h2 class="styleGuide__sectionTitle">Molecules</h2>
+
+            <div class="styleGuide__element">
+                <h3>Headline</h3>
                 <div class="styleGuide__example">
                     <div class="section headline">
                         <span class="headline__name">Satanic Verses</span>
@@ -69,6 +91,55 @@ title: Sam Barnett | styleguide
                     </code>
                 </pre>
             </div>
+
+            <div class="styleGuide__element">
+                <h3>Image Block</h3>
+                <div class="styleGuide__example">
+                    <div class="imageBlock">
+                        <a href="https://upload.wikimedia.org/wikipedia/commons/8/85/Points_of_a_horse.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Points_of_a_horse.jpg"></a>
+                        <a href="https://upload.wikimedia.org/wikipedia/commons/a/a7/Bundesarchiv_Bild_146-1970-073-17%2C_Türkische_Kavallerie_südlich_von_Jerusalem.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Bundesarchiv_Bild_146-1970-073-17%2C_Türkische_Kavallerie_südlich_von_Jerusalem.jpg"></a>
+                        <a href="https://upload.wikimedia.org/wikipedia/commons/f/ff/Murron-Ryhti_pulling.png"><img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Murron-Ryhti_pulling.png"></a>
+                        <a href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Equine_evolution.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Equine_evolution.jpg"></a>
+                        <a href="https://upload.wikimedia.org/wikipedia/commons/5/55/Brockhaus_and_Efron_Encyclopedic_Dictionary_b35_043-0.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Brockhaus_and_Efron_Encyclopedic_Dictionary_b35_043-0.jpg"></a>
+                    </div>
+                </div>
+                <pre>
+                    <code class="language-html">
+                        <script type="prism-html-markup">
+                        <div class="styleGuide__example">
+                            <div class="imageBlock">
+                                <a href="/"><img src="/"></a>
+                                <a href="/"><img src="/"></a>
+                            </div>
+                        </div>
+                        </script>
+                    </code>
+                </pre>
+            </div>
+
+            <div class="styleGuide__element">
+                <h3>Navigation</h3>
+                <div class="styleGuide__example">
+                    <div class="navigation">
+                        <div><a href="/">Denies</a></div>
+                        <div><a href="/">Subdialectic</a></div>
+                        <div><a href="/">Situationism</a></div>
+
+                    </div>
+                </div>
+                <pre>
+                    <code class="language-html">
+                        <script type="prism-html-markup">
+                        <nav class="navigation">
+                            <div><a href="/">...</a></div>
+                            <div><a href="/">...</a></div>
+                        </nav>
+                        </script>
+                    </code>
+                </pre>
+            </div>
+
+
         </section>
     </section>
 </main>
