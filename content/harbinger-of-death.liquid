@@ -20,16 +20,44 @@ layout: layout.liquid
 ---
 <main class="mainContent">
 
-<section class="writeup">
- <h2>Concept</h2>
- <p>Harbingers of Death compiles historic superstitions about death. This project satirizes present-day conspiracy theories, by presenting now-defunct superstitions as if they are real. This concept is a reaction to the prevalence of conspiracy theories and their impact on everyday life. </p>
+ <section class="writeup column">
+  <div class="writeup__header">
+   <h1 class="writeup__title">{{ title }}</h1>
+   {% if category-note == blank %}<p class="writeup__smallDetail">{{ category-note }}</p>{% endif %}
+   <img class="writeup__image" src="{{ title | slug | prepend: '/media/projects/' | append: '/hero.png' | url | prepend: baseUrl }}">
+   <div class="writeup__details">
+    <div class="">
+     <div class="writeup__list__title">Category:</div>
+     {%- for category in  categories -%}
+      <span class="writeup__list">{{ category }}</span>
+     {%- endfor -%}
+    </div>
+    <div class="">
+     <div class="writeup__list__title">Team:</div>
+     {%- for mate in team -%}
+      <a class="writeup__list" href="{{ mate.portfolio }}">{{ mate.name }}</a>
+     {%- endfor -%}
+    </div>
+   </div>
+  </div>
 
- <p>The omens are drawn from the 1889 article Current Superstitions. I. Omens of Death, by Bergen, F. D., Beauchamp, W. M., & Newell, W. W.</p>
+  <h2>Concept</h2>
+  <p class="writeup__paragraph">Harbingers of Death compiles historic superstitions about death. This project satirizes present-day conspiracy theories, by presenting now-defunct superstitions as if they are real. This concept is a reaction to the prevalence of conspiracy theories and their impact on everyday life. </p>
 
- <p>Omens are navigated by who is at fault, who will die and the aspect of life it relates too. They are sorted and loaded dynamically from a database.</p>
+  <p class="writeup__paragraph">The omens are drawn from the 1889 article Current Superstitions. I. Omens of Death, by Bergen, F. D., Beauchamp, W. M., & Newell, W. W.</p>
 
- <p>Each omen is paired with a 16th century Dutch or Italian painting and a semi-relevant haiku.</p>
+  <p class="writeup__paragraph">Omens are navigated by who is at fault, who will die and the aspect of life it relates too. They are sorted and loaded dynamically from a database.</p>
 
- <p>Users can sign in to track the omen’s they’ve experienced in their life…and the consequences. The dashboard shows how many times that they are going to die, and how many times various members of their different social circles are going to die.</p>
-</section>
+  <p class="writeup__paragraph">Each omen is paired with a 16th century Dutch or Italian painting and a semi-relevant haiku.</p>
+
+  <p class="writeup__paragraph">Users can sign in to track the omen’s they’ve experienced in their life…and the consequences. The dashboard shows how many times that they are going to die, and how many times various members of their different social circles are going to die.</p>
+
+  <div class="imageBlock">
+   <a href="{{ title | slug | prepend: '/media/projects/' | append: '/1.png' | url | prepend: baseUrl }}"><img src="{{ title | slug | prepend: '/media/projects/' | append: '/1.png' | url | prepend: baseUrl }}"></a>
+   <a href="{{ title | slug | prepend: '/media/projects/' | append: '/2.png' | url | prepend: baseUrl }}"><img src="{{ title | slug | prepend: '/media/projects/' | append: '/2.png' | url | prepend: baseUrl }}"></a>
+   <a href="{{ title | slug | prepend: '/media/projects/' | append: '/3.png' | url | prepend: baseUrl }}"><img src="{{ title | slug | prepend: '/media/projects/' | append: '/3.png' | url | prepend: baseUrl }}"></a>
+   <a href="{{ title | slug | prepend: '/media/projects/' | append: '/4.png' | url | prepend: baseUrl }}"><img src="{{ title | slug | prepend: '/media/projects/' | append: '/4.png' | url | prepend: baseUrl }}"></a>
+  </div>
+
+ </section>
 </main>
