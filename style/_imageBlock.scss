@@ -1,0 +1,16 @@
+.imageBlock {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  a {
+    flex-basis: calc(50% - .5em);
+    padding-top: ms(0);
+  }
+  img {
+    width: 100%;
+    border: 1px solid $black;
+  }
+}

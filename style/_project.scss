@@ -1,0 +1,52 @@
+
+.project {
+  margin: ms(0) 0;
+  padding: ms(-3) 0;
+  height: ms(4);
+ // box-sizing: border-box;
+
+  border-top: 2px solid #222222;
+  border-bottom: 2px solid #222222;
+
+  overflow: hidden;
+  position: relative;;
+
+  transition: height .5s ease-out,  background-color .5s ease-out, padding .5s ease-out;
+  background-color: rgba(22,22,22, 0);
+
+
+  &:hover {
+    background-color: rgba(22,22,22, 1);
+    color: #fff;
+    height: ms(5);
+    padding: ms(-3);
+  }
+
+
+  &__list {
+    margin-top: ms(3);
+  }
+
+  &__category {
+    z-index: 2;
+    @include rms(-1);
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    &:not(:first-child):before {
+      content: "/";
+      margin-right: ms(-2);
+      margin-left: ms(-2);
+
+    }
+  }
+
+  &__title {
+    z-index: 2;
+    @include rms(0);
+    font-family: p22-mackinac-pro,serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+}

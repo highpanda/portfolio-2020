@@ -1,4 +1,4 @@
-window.onload = function(){
-
-}
+(function() {
+    var $gallery = new SimpleLightbox('.imageBlock a', {});
+})();
 

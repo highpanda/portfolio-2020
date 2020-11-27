@@ -1,5 +1,6 @@
 ---
 siteTitle: Sam Barnett Portfolio
+baseUrl: "http://localhost:8080"
 ---
 <!doctype html>
 <head>
@@ -34,6 +35,7 @@ siteTitle: Sam Barnett Portfolio
 {% include 'partials/nav' %}
 {{ content }}
 {% include 'partials/footer' %}
-<script src="{{ '/script/script.js' | url }}"></script>
+<script src="{{ '/script/vendor/simple-lightbox.min.js' | url }}"></script>
+<script src="{{ '/script/script-min.js' | url }}"></script>
 </body>
 </html>

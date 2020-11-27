@@ -4,4 +4,7 @@
 @import "base", "typography";
 
 // COMPONENTS
-@import "navigation";
+@import "navigation", "headline", "project", "writeup", "imageBlock", "footer", "biography";
+
+// Simple Lightbox [https://simplelightbox.com/]
+@import "_vendor/simple-lightbox/simple-lightbox.min";

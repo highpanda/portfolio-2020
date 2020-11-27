@@ -1,0 +1,9 @@
+.footer {
+  padding: ms(0);
+
+  span {
+    @include rms(-1);
+    color: transparentize($black, .3);
+  }
+
+}

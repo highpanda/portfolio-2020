@@ -1,0 +1,18 @@
+
+
+.headline {
+
+  &__name {
+    @include rms(4);
+    font-family: forma-djr-display, sans-serif;
+      font-weight: 500;
+      font-style: normal;
+  }
+  &__title {
+    padding-left: ms(-2);
+    @include rms(4);
+    font-family: p22-mackinac-pro,serif;
+      font-weight: 400;
+      font-style: italic;
+  }
+}

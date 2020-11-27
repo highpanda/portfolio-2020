@@ -29,9 +29,10 @@ $modularscale: (
         ratio: 1.414
 );
 
-@include rms-set-scales(16px, 1.333, $phone 1.414);
+@include rms-set-scales(16px, 1.2, $phone 1.414);
 
 
+$black: #222222;
 
 //{
 //  font-family: forma-djr-display, sans-serif;
@@ -69,9 +70,13 @@ $modularscale: (
 //  font-style: italic;
 //}
 
+.mainContent {
+  min-height: 100vh;
 
-.navigation{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  box-sizing: border-box;
+  margin: ms(0);
+}
+
+.section {
+  margin-top: ms(3);
 }

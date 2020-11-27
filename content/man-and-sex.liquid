@@ -1,40 +1,27 @@
-<!doctype html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    
-
-    <!-- SEARCH ENGINE AVOID   -->
-    <meta name="robots" content="noindex">
-
-
-    <title>Man & Sex | Sam Barnett Portfolio</title>
-    <meta name="description"
-          content="Sam Barnett's Portfolio">
-
-    <!--  FAVICON-->
-    <link rel="shortcut icon" type="image/x-icon" href="media/logos/favicon.ico"/>
-
-    <!-- Link to use Adobe Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/mwa1wwc.css">
-
-    <!-- Normalize.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-          crossorigin="anonymous"/>
-
-    <link rel="stylesheet" href="/iat339/style/style.css">
-
-</head>
-<body>
-
-<nav class="navigation">
-    
-        <div class="home"><a href="/">Sam Barnett</a></div>
-        <div class="about"><a href="/iat339/about/">About</a></div>
-    
-
-</nav>
+---
+tags: projects
+title: Man & Sex
+categories: 
+ - Speculative Design
+ - Faux-Documentary
+category-note: This project is embedded in the speculative strategies of design fiction and critical design.
+team:
+ - 
+  name: █████████████████
+  portfolio: www.example.com
+ - 
+  name: █████████████████
+  portfolio: www.example.com
+ - 
+  name: █████████████████
+  portfolio: www.example.com
+team-note: Teammate names have been redacted due to the satirical nature of this project. 
+role: 
+ - Conceptual Development
+ - Filmmaker
+role-note:
+layout: layout.liquid
+---
 <main class="mainContent">
 
 <section class="writeup">
@@ -46,11 +33,11 @@
 
 <p>We present this heightened example of hyper masculinity, to serve as a catalyst for self-reflection. </p>
 <div class="imageBlock">
- <a href="http://localhost:8080/iat339/media/projects/man-and-sex/1.png"><img src="http://localhost:8080/iat339/media/projects/man-and-sex/1.png"></a>
- <a href="http://localhost:8080/iat339/media/projects/man-and-sex/2.png"><img src="http://localhost:8080/iat339/media/projects/man-and-sex/2.png"></a>
- <a href="http://localhost:8080/iat339/media/projects/man-and-sex/3.png"><img src="http://localhost:8080/iat339/media/projects/man-and-sex/3.png"></a>
- <a href="http://localhost:8080/iat339/media/projects/man-and-sex/4.png"><img src="http://localhost:8080/iat339/media/projects/man-and-sex/4.png"></a>
- <a href="http://localhost:8080/iat339/media/projects/man-and-sex/5.png"><img src="http://localhost:8080/iat339/media/projects/man-and-sex/5.png"></a>
+ <a href="{{ title | slug | prepend: '/media/projects/' | append: '/1.png' | url | prepend: baseUrl }}"><img src="{{ title | slug | prepend: '/media/projects/' | append: '/1.png' | url | prepend: baseUrl }}"></a>
+ <a href="{{ title | slug | prepend: '/media/projects/' | append: '/2.png' | url | prepend: baseUrl }}"><img src="{{ title | slug | prepend: '/media/projects/' | append: '/2.png' | url | prepend: baseUrl }}"></a>
+ <a href="{{ title | slug | prepend: '/media/projects/' | append: '/3.png' | url | prepend: baseUrl }}"><img src="{{ title | slug | prepend: '/media/projects/' | append: '/3.png' | url | prepend: baseUrl }}"></a>
+ <a href="{{ title | slug | prepend: '/media/projects/' | append: '/4.png' | url | prepend: baseUrl }}"><img src="{{ title | slug | prepend: '/media/projects/' | append: '/4.png' | url | prepend: baseUrl }}"></a>
+ <a href="{{ title | slug | prepend: '/media/projects/' | append: '/5.png' | url | prepend: baseUrl }}"><img src="{{ title | slug | prepend: '/media/projects/' | append: '/5.png' | url | prepend: baseUrl }}"></a>
 
 
 </div>
@@ -69,10 +56,3 @@ This project required an incredible amount of finesse to create an effective sat
 <p>To achieve this we embedded the project in research on the Seduction Community and its effect of individuals and society. We were drawn to the Seduction Community because of its powerful allure as a self-help community, albeit with an exterior motive—where ‘everyday men’ form meaningful relationships with each other while improving their lives.</p>
 </section>
 </main>
-<footer class="footer">
-    <span>© Sam Barnett 2020</span>
-</footer>
-<script src="/iat339/script/vendor/simple-lightbox.min.js"></script>
-<script src="/iat339/script/script-min.js"></script>
-</body>
-</html>
