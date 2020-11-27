@@ -4,7 +4,10 @@
 @import "base", "typography";
 
 // COMPONENTS
-@import "navigation", "headline", "project", "writeup", "imageBlock", "footer", "biography";
+@import "navigation", "headline", "project", "writeup", "imageBlock", "footer", "biography", "styleguide";
 
 // Simple Lightbox [https://simplelightbox.com/]
 @import "_vendor/simple-lightbox/simple-lightbox.min";
+
+// Prism (code highlighting) [https://simplelightbox.com/]
+@import "_vendor/prism/prism";

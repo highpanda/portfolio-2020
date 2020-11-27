@@ -1,7 +1,8 @@
 .footer {
   padding: ms(0);
 
-  span {
+  &__elem {
+    padding-right: ms(0);
     @include rms(-1);
     color: transparentize($black, .3);
   }

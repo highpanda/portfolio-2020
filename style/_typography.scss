@@ -23,6 +23,21 @@ caption {
 }
 
 
+h1 {
+  @include rms(3);
+}
+h2 {
+  @include rms(2);
+}
+h3 {
+  @include rms(1);
+}
+h4, h5 {
+  @include rms(0);
+  line-height: 1.4;
+  margin: 0;
+}
+
 body {
   font-family: forma-djr-display, sans-serif;
   font-weight: 400;
@@ -30,10 +45,21 @@ body {
   color: $black;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin: 0 0 1.4rem 0;
+}
+
 
 a {
   color: $black;
-}
-a:visited {
-  color: currentColor;
+  transition: color .5s ease-out;
+
+  &:visited {
+    color: currentColor;
+  }
+  &:hover {
+    color: transparentize($black, .3)
+  }
 }

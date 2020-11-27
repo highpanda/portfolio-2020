@@ -1,0 +1,30 @@
+.styleGuide {
+  &__sectionTitle {
+    border-bottom: 2px solid $black;
+
+  }
+  &__element {
+  }
+
+  h3{
+    margin-top: ms(1);
+    margin-bottom: ms(-3);
+  }
+
+  &__example {
+    border: 1px solid $black;
+    padding: ms(0);
+    border-radius: ms(-2) ms(-2) 0 0;
+    display: block;
+    background-color: transparentize($black, .95);
+    box-shadow: 4px 4px 4px transparentize($black, .8);
+
+  }
+}
+
+// using important to override prism code highlighter styles
+pre[class*=language-] {
+  margin-top: 0 !important;
+  border-radius: 0 0 ms(-2) ms(-2) !important;
+  box-shadow: 4px 4px 4px transparentize($black, .8);
+}

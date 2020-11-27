@@ -80,3 +80,15 @@ $black: #222222;
 .section {
   margin-top: ms(3);
 }
+
+.column {
+  width: 100%;
+
+  @media screen and ($bp-phone) {
+    width: 60%;
+  }
+
+  @media screen and ($bp-tablet) {
+    width: 40%;
+  }
+}

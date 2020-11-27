@@ -51,6 +51,20 @@
   margin-top: 2.827145944em;
 }
 
+.column {
+  width: 100%;
+}
+@media screen and (min-width: 430px) {
+  .column {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .column {
+    width: 40%;
+  }
+}
+
 html,
 body,
 span,
@@ -73,6 +87,44 @@ caption {
   -webkit-font-smoothing: antialiased;
 }
 
+h1 {
+  font-size: 1.728em;
+}
+@media screen and (min-width: 26.875em) {
+  h1 {
+    font-size: 2.827145944em;
+  }
+}
+
+h2 {
+  font-size: 1.44em;
+}
+@media screen and (min-width: 26.875em) {
+  h2 {
+    font-size: 1.999396em;
+  }
+}
+
+h3 {
+  font-size: 1.2em;
+}
+@media screen and (min-width: 26.875em) {
+  h3 {
+    font-size: 1.414em;
+  }
+}
+
+h4, h5 {
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0;
+}
+@media screen and (min-width: 26.875em) {
+  h4, h5 {
+    font-size: 1em;
+  }
+}
+
 body {
   font-family: forma-djr-display, sans-serif;
   font-weight: 400;
@@ -80,12 +132,21 @@ body {
   color: #222222;
 }
 
-a {
-  color: #222222;
+p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin: 0 0 1.4rem 0;
 }
 
+a {
+  color: #222222;
+  transition: color 0.5s ease-out;
+}
 a:visited {
   color: currentColor;
+}
+a:hover {
+  color: rgba(34, 34, 34, 0.7);
 }
 
 .navigation {
@@ -156,6 +217,7 @@ a:visited {
   content: "/";
   margin-right: 0.5001510456em;
   margin-left: 0.5001510456em;
+  text-decoration: none;
 }
 .project__title {
   z-index: 2;
@@ -170,15 +232,58 @@ a:visited {
   }
 }
 
-.writeup {
-  margin-left: 1em;
-  width: 40%;
+/**
+ * Component name:
+ * `.writeup` - documentation on what your
+ * component is goes here. Markdown is encouraged.
+ *
+ *     @example
+ *     div.writeup
+ *       h3 Sample code
+ *       p goes here
+ */
+.writeup__image {
+  width: 100%;
 }
-.writeup p {
+.writeup__paragraph {
   font-family: p22-mackinac-pro, serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.2;
+}
+.writeup__list {
+  font-size: 0.8333333333em;
+}
+@media screen and (min-width: 26.875em) {
+  .writeup__list {
+    font-size: 0.7072135785em;
+  }
+}
+.writeup__list:not(:first-of-type):before {
+  content: "/";
+  margin-right: 0.5001510456em;
+  margin-left: 0.5001510456em;
+  text-decoration: none;
+}
+.writeup__list__title {
+  display: inline;
+  font-size: 0.8333333333em;
+  font-weight: 500;
+  padding-right: 0.5001510456em;
+}
+@media screen and (min-width: 26.875em) {
+  .writeup__list__title {
+    font-size: 0.7072135785em;
+  }
+}
+.writeup__smallDetail {
+  font-size: 1em;
+  font-style: italic;
+}
+@media screen and (min-width: 26.875em) {
+  .writeup__smallDetail {
+    font-size: 1em;
+  }
 }
 
 .imageBlock {
@@ -199,19 +304,17 @@ a:visited {
 .footer {
   padding: 1em;
 }
-.footer span {
+.footer__elem {
+  padding-right: 1em;
   font-size: 0.8333333333em;
   color: rgba(34, 34, 34, 0.7);
 }
 @media screen and (min-width: 26.875em) {
-  .footer span {
+  .footer__elem {
     font-size: 0.7072135785em;
   }
 }
 
-.biography {
-  padding: 1em;
-}
 .biography p {
   font-size: 2.0736em;
   line-height: 1.2;
@@ -228,6 +331,28 @@ a:visited {
   font-family: p22-mackinac-pro, serif;
   font-weight: 400;
   font-style: italic;
+}
+
+.styleGuide__sectionTitle {
+  border-bottom: 2px solid #222222;
+}
+.styleGuide h3 {
+  margin-top: 1.414em;
+  margin-bottom: 0.3537136108em;
+}
+.styleGuide__example {
+  border: 1px solid #222222;
+  padding: 1em;
+  border-radius: 0.5001510456em 0.5001510456em 0 0;
+  display: block;
+  background-color: rgba(34, 34, 34, 0.05);
+  box-shadow: 4px 4px 4px rgba(34, 34, 34, 0.2);
+}
+
+pre[class*=language-] {
+  margin-top: 0 !important;
+  border-radius: 0 0 0.5001510456em 0.5001510456em !important;
+  box-shadow: 4px 4px 4px rgba(34, 34, 34, 0.2);
 }
 
 /*!
@@ -536,4 +661,167 @@ body.hidden-scroll {
     transform: scale(1.2);
     opacity: 0;
   }
+}
+/* PrismJS 1.22.0
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+liquid+sass+scss+yaml&plugins=line-numbers+normalize-whitespace */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+code[class*=language-],
+pre[class*=language-] {
+  color: #f8f8f2;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #8292a2;
+}
+
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+  color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #e6db74;
+}
+
+.token.keyword {
+  color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+  color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+pre[class*=language-].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*=language-].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
 }
