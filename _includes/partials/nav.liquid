@@ -1,6 +1,6 @@
 <nav class="navigation">
     {% if page.url == "/about/" %}
-        <div class="home"><a href="/">Sam Barnett</a></div>
+            <div class="home"><a href="{{ "/" | url }}">Sam Barnett</a></div>
     {% elsif page.url != "/" %}
         <div class="home"><a href="{{ "/" | url }}">Sam Barnett</a></div>
         <div class="about"><a href="{{ "/about/" | url}}">About</a></div>
