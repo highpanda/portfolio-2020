@@ -23,7 +23,7 @@ module.exports = function (eleventyConfig) {
       "liquid"
     ],
 
-    pathPrefix: "/iat339/",
+    pathPrefix: "/~sjbarnet/iat339/portfolio/",
 
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "liquid",

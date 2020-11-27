@@ -1,0 +1,20 @@
+.contact {
+  margin-top: ms(5);
+  text-align: right;
+
+  &__heading {
+    @include rms(0);
+    font-family: p22-mackinac-pro,serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  &__social, &__email {
+    display: block;
+    @include rms(2);
+
+    a {
+      font-style: italic;
+    }
+  }
+
+}
