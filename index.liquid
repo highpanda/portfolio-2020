@@ -5,15 +5,17 @@ biography: Hey, I’m Sam Barnett. I’m a Vancouver based designer, photographe
 ---
 <main class="mainContent">
     <section class="section headline">
-        <span class="headline__name" data-js="name">Sam Barnett</span>
+        <span class="headline__name" data-js-floatingImage="parent">
+            Sam Barnett
+            <img src="{{ "/media/profile.png" | url | prepend: baseUrl }}" data-js-floatingImage="image" class="headline__image floatingImage">
+        </span>
         <span class="headline__title">Designer / Filmmaker / Photographer</span>
-        <img src="media/profile.png" data-js="profile" class="headline__image">
     </section>
     <section class="section">
         <span class="project__description">A selection of recent work:</span>
         {%- for project in collections.projects -%}
             {% assign slug = project.data.title | slug  %}
-        <section class="project">
+        <section class="project" data-js-floatingImage="parent">
             <a href="content/{{ slug }}">
             <div class="project__title">{{ project.data.title }}</div>
             <div class="project__categories">
@@ -22,6 +24,7 @@ biography: Hey, I’m Sam Barnett. I’m a Vancouver based designer, photographe
                 {%- endfor -%}
             </div>
             </a>
+            <img class="project__image  floatingImage" data-js-floatingImage="image" src="{{ project.data.title | slug | prepend: '/media/projects/' | append: '/hero.png' | url | prepend: baseUrl }}">
         </section>
         {%- endfor -%}
     </section>

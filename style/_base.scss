@@ -16,7 +16,6 @@ $bp-tablet-down: "max-width: 768px";
 $bp-desktop: "min-width: 1080px";
 
 
-
 @function space($n) {
   $spacing-increment: 1;
 
@@ -70,6 +69,10 @@ $white: #eeeeee;
 //  font-weight: 500;
 //  font-style: italic;
 //}
+
+body {
+  overflow-x: hidden;
+}
 
 .mainContent {
   min-height: 100vh;

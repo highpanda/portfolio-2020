@@ -1,0 +1,21 @@
+.floatingImage {
+  pointer-events: none;
+  opacity: 0;
+  display: none;
+
+  @media screen and ($bp-tablet) {
+
+    position: fixed;
+
+    width: 100%;
+    max-width: 100%;
+    top:0;
+    left:0;
+    
+    &--hover {
+      display: block;
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+}

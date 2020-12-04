@@ -41,6 +41,10 @@
 
   @param  (number) $n: position on the modular scale to use.
 */
+body {
+  overflow-x: hidden;
+}
+
 .mainContent {
   min-height: 100vh;
   box-sizing: border-box;
@@ -158,6 +162,26 @@ a:hover {
   color: rgba(34, 34, 34, 0.7);
 }
 
+.floatingImage {
+  pointer-events: none;
+  opacity: 0;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .floatingImage {
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .floatingImage--hover {
+    display: block;
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
 .navigation {
   width: 100%;
   box-sizing: border-box;
@@ -171,19 +195,20 @@ a:hover {
   }
 }
 
-.headline {
-  position: relative;
-}
 .headline__name {
   font-size: 2.0736em;
   font-family: forma-djr-display, sans-serif;
   font-weight: 500;
   font-style: normal;
+  transition: color 0.5s ease-out;
 }
 @media screen and (min-width: 26.875em) {
   .headline__name {
     font-size: 3.9975843648em;
   }
+}
+.headline__name:hover {
+  color: rgba(34, 34, 34, 0.7);
 }
 .headline__title {
   padding-left: 0.5001510456em;
@@ -198,13 +223,8 @@ a:hover {
   }
 }
 .headline__image {
-  pointer-events: none;
-  opacity: 0;
-  position: absolute;
-  mix-blend-mode: difference;
-}
-.headline__image--hover {
-  opacity: 1;
+  width: auto;
+  height: 1000px;
 }
 
 .project {

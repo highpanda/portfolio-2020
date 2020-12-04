@@ -10,29 +10,38 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 document.addEventListener('DOMContentLoaded', function () {
 
 
-    let name = document.querySelector('[data-js="name"]');
-
-    // https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element-relative-to-the-browser-window#:~:text=getBoundingClientRect()%20is%20a%20javascript,relative%20to%20viewport%20of%20window.&text=These%20specifiy%20the%20position%20of,nearest%20parent%20that%20has%20layout.
-    let nameXPos = window.scrollX + name.getBoundingClientRect().left // X
-    let nameYPos = window.scrollY + name.getBoundingClientRect().top // Y
-
-
-    let profile = document.querySelector('[data-js="profile"]');
+    let floatingImageParent = document.querySelectorAll('[data-js-floatingImage="parent"]');
+    let floatingImage = document.querySelectorAll('[data-js-floatingImage="image"]');
 
     window.addEventListener('mousemove', function (e) {
-        const style = `left: ${e.pageX.map(0, nameXPos, -100, 0)}px; top: ${e.pageY.map(0, nameYPos, 0, -300)}px`;
-        profile.setAttribute("style", style);
+        floatingImageParent.forEach(function(parent){
+            var viewportPos = parent.getBoundingClientRect();
+
+            let image = parent.querySelector('[data-js-floatingImage="image"]');
+            const style = `transform: scale(0.5) translateX(${(e.clientX.map(0, window.innerWidth, viewportPos.left, viewportPos.right))-(image.width/2)}px) translateY(${(e.clientY.map(0, window.innerHeight, viewportPos.top, viewportPos.bottom))-(image.height/2)}px)`;
+            // const style = `transform: scale(.5) translateX(0px) translateY(0px) `;
+
+            // const style = `transform: translateX(${e.clientX-(image.width/2)}px) translateY(${e.clientY-(image.height/2)}px) scale(.5)`;
+            image.setAttribute("style", style);
+        });
+
     });
 
-    name.addEventListener('mouseover', function(e){
-            if (!profile.classList.contains("headline__image--hover")){
-                profile.classList.add("headline__image--hover");
+    floatingImageParent.forEach(function(parent){
+        parent.addEventListener('mouseover', function(e){
+            let image = parent.querySelector('[data-js-floatingImage="image"]');
+
+            if (!image.classList.contains("floatingImage--hover")){
+                image.classList.add("floatingImage--hover");
             }
-    });
-    name.addEventListener('mouseout', function(e){
-        if (profile.classList.contains("headline__image--hover")){
-            profile.classList.remove("headline__image--hover");
-        }
+        });
+        parent.addEventListener('mouseout', function(e){
+            let image = parent.querySelector('[data-js-floatingImage="image"]');
+
+            if (image.classList.contains("floatingImage--hover")){
+                image.classList.remove("floatingImage--hover");
+            }
+        });
     });
 
 });
