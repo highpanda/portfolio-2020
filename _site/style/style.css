@@ -44,7 +44,12 @@
 .mainContent {
   min-height: 100vh;
   box-sizing: border-box;
-  margin: 3.9975843648em;
+  margin: 1em;
+}
+@media screen and (min-width: 430px) {
+  .mainContent {
+    margin: 3.9975843648em;
+  }
 }
 
 .section {
@@ -158,9 +163,17 @@ a:hover {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  padding: 1em 3.9975843648em;
+  padding: 1em 1em;
+}
+@media screen and (min-width: 430px) {
+  .navigation {
+    padding: 1em 3.9975843648em;
+  }
 }
 
+.headline {
+  position: relative;
+}
 .headline__name {
   font-size: 2.0736em;
   font-family: forma-djr-display, sans-serif;
@@ -183,6 +196,15 @@ a:hover {
   .headline__title {
     font-size: 3.9975843648em;
   }
+}
+.headline__image {
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  mix-blend-mode: difference;
+}
+.headline__image--hover {
+  opacity: 1;
 }
 
 .project {
@@ -342,6 +364,7 @@ a:hover {
   font-family: p22-mackinac-pro, serif;
   font-weight: 400;
   font-style: italic;
+  display: inline-block;
 }
 
 .styleGuide__sectionTitle {

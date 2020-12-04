@@ -2,6 +2,8 @@
 
 .headline {
 
+  position: relative;
+
   &__name {
     @include rms(4);
     font-family: forma-djr-display, sans-serif;
@@ -15,4 +17,18 @@
       font-weight: 400;
       font-style: italic;
   }
+
+
+  &__image {
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    mix-blend-mode: difference;
+
+    &--hover {
+      opacity: 1;
+    }
+  }
+
+
 }
